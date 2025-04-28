@@ -1,0 +1,34 @@
+﻿<Window x:Class="CarInfoClient.Map_Page"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
+        xmlns:local="clr-namespace:CarInfoClient"
+        mc:Ignorable="d"
+        Title="Map_Page" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="730"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <wv2:WebView2 x:Name ="webView"/>
+
+
+
+
+        <Button x:Name="arrow_btn" 
+                Width="30" Height="30" VerticalAlignment="Top" 
+                HorizontalAlignment="Left"
+                BorderBrush="{x:Null}" Click="arrow_btn_Click"  Grid.Column="1">
+            <Button.Background>
+                <ImageBrush ImageSource="/arrow.png"/>
+            </Button.Background>
+        </Button>
+
+
+
+    </Grid>
+</Window>

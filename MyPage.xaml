@@ -1,0 +1,53 @@
+﻿<Window x:Class="CarInfoClient.MyPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        
+        xmlns:wpf="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf" 
+        
+        mc:Ignorable="d"
+        Title="Car_Info" Height="450" Width="800">
+
+
+    <Grid>
+
+        <wpf:Gauge x:Name="Gauge" Margin="23,145,404,49"
+                   From="0" To="100" 
+                   LabelsVisibility="Visible">
+            <wpf:Gauge.GaugeActiveFill>
+                <LinearGradientBrush>
+                    <GradientStop Color="Purple" Offset="0.0"/>
+                    <GradientStop Color="Purple" Offset="0.5"/>
+                    <GradientStop Color="Purple" Offset="1.0"/>
+                </LinearGradientBrush>
+            </wpf:Gauge.GaugeActiveFill>
+        </wpf:Gauge>
+
+        <wpf:Gauge x:Name="Gauge_1" Margin="417,147,19,47"
+           From="0" To="100" 
+           LabelsVisibility="Visible" >
+            <wpf:Gauge.GaugeActiveFill>
+                <LinearGradientBrush>
+                    <GradientStop Color="Purple" Offset="0.0"/>
+                    <GradientStop Color="Purple" Offset="0.5"/>
+                    <GradientStop Color="Purple" Offset="1.0"/>
+
+                </LinearGradientBrush>
+            </wpf:Gauge.GaugeActiveFill>
+
+
+        </wpf:Gauge>
+        <Label Content="Oil" HorizontalAlignment="Left" Margin="179,367,0,0" VerticalAlignment="Top"/>
+        <Label Content="Engine" HorizontalAlignment="Left" Margin="569,367,0,0" VerticalAlignment="Top"/>
+        <Button Content="사용자 로그아웃" HorizontalAlignment="Left" Margin="668,10,0,0" VerticalAlignment="Top" Width="112" Background="{x:Null}" BorderBrush="{x:Null}"/>
+        <Button x:Name="btn_func" HorizontalAlignment="Left" Margin="15,11,0,0" VerticalAlignment="Top" Height="40" Width="40"  BorderBrush="{x:Null}" Foreground="{x:Null}" Click="btn_func_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/three_line.png"/>
+            </Button.Background>
+        </Button>
+
+
+
+    </Grid>
+</Window>
